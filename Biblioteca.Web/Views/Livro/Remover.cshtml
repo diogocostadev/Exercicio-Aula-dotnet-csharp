@@ -1,0 +1,8 @@
+@model Biblioteca.Servico.Models.Livro
+
+<h2>Tem certeza que deseja remover "@Model.Titulo"?</h2>
+
+<form asp-action="ConfirmarDeletar" method="post">
+    <input type="hidden" name="id" value="@Model.Id" />
+    <button type="submit">Sim, quero remover</button>
+</form>

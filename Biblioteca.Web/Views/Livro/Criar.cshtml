@@ -1,0 +1,10 @@
+@model Biblioteca.Servico.Models.Livro
+
+<h2>Adicionar Novo Livro</h2>
+
+<form asp-action="Criar" method="post">
+    <input type="text" name="Titulo" placeholder="Título" required />
+    <input type="text" name="Autor" placeholder="Autor" required />
+    <input type="number" name="Ano" placeholder="Ano de Publicação" required />
+    <button type="submit">Salvar</button>
+</form>

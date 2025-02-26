@@ -1,0 +1,11 @@
+@model Biblioteca.Servico.Models.Livro
+
+<h2>Editar Livro</h2>
+
+<form asp-action="Editar" method="post">
+    <input type="hidden" name="Id" value="@Model.Id" />
+    <input type="text" name="Titulo" value="@Model.Titulo" required />
+    <input type="text" name="Autor" value="@Model.Autor" required />
+    <input type="number" name="Ano" value="@Model.Ano" required />
+    <button type="submit">Salvar</button>
+</form>

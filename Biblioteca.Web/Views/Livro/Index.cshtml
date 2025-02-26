@@ -1,0 +1,16 @@
+@model List<Biblioteca.Servico.Models.Livro>
+
+<h2>Biblioteca de Livros</h2>
+
+<a asp-action="Criar">Adicionar Novo Livro</a>
+
+<ul>
+    @foreach (var livro in Model)
+    {
+        <li>
+            <strong>@livro.Titulo</strong> - @livro.Autor (@livro.Ano)
+            <a asp-action="Editar" asp-route-id="@livro.Id">Editar</a> |
+            <a asp-action="Remover" asp-route-id="@livro.Id">Remover</a>
+        </li>
+    }
+</ul>
